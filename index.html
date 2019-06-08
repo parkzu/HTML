@@ -17,9 +17,10 @@
 }
 header {
 	width: 970px;
-	height: 100px;
+	height: 220px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
+	background-color: #2a3654;
 }
 #logo {
 	margin-top: 20px;
@@ -28,13 +29,17 @@ header {
 }
 #top {
 	float: right;
-	margin: 30px 20px 0 0;
+	margin: 25px 20px 0 0;
+	font-family: 고딕체;
+	color: white;
+	font-size: 17px;
 }
 nav {
-	width: 750px;
-	height: 70px;
+	width: 970px;
+	height: 90px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
+		background-color: #2a3654;
 }
 nav li {
 	float: center;
@@ -46,7 +51,8 @@ li {
 section {
 	float: left;
 	margin-top: 10px;
-	border: solid 1px #cccccc;
+	width: 970px;
+	height: 500px;
 }
 aside {
 	float: left;
@@ -54,7 +60,7 @@ aside {
 	margin-top: 10px;
 	border: solid 1px #cccccc;
 	padding-left: 25px;
-	padding-right: 25px; 
+	padding-right: 29px
 }
 aside li {
 	margin-bottom: 20px;
@@ -76,24 +82,46 @@ footer {
 }
 .dropdown{
 			display: inline-block;
+			color: white;
+			font-size: 18px;
 		}
 		.dropdownContents{
 			display: none;
 			background-color: white;
 			position: absolute;
 			border: solid 1px #777777;
+			color: black;
+			font-family: 고딕체;
 		}
 		.dropdown:hover .dropdownContents{
 			display: block;
 		}
 nav ul {
-	margin: 30px;
+	padding-left: 110px;
+	padding-top: 20px;
 }
-a:hover {
-	color: pink;
+#asd:hover {
+	color: #ffd8d8;
 }
-a {
+#asd {
 	text-decoration: none;
+}
+#asdf {
+	text-decoration: none;
+}
+#asd:link {
+	color: white;
+}
+#asd:visited {
+	color: white;
+}
+#logo2 {
+	margin-top: 20px;
+	float: left;
+	margin-left: 20px;
+}
+#world{
+	margin-left: 250px;
 }
 </style>
 </head>
@@ -101,68 +129,84 @@ a {
 <div id="page">
 <header>
 	<div id="logo">
-		봄 여행 주간 4.27 ~ 5.12
+		<img src="./logo.jpg" width="600">
 	</div>
+
 	<div id="top">
-		로그인 | 회원가입 | 마이페이지 | 고객센터
+		<a id="asd" href="https://www.naver.com">로그인</a>  |  
+		<a id="asd" href="https://www.naver.com">회원가입</a>  |  
+		<a id="asd" href="https://www.naver.com">마이페이지</a>  |  
+		<a id="asd" href="https://www.naver.com">고객센터</a>
 	</div>
 </header>
 	<div class="clear"></div>
 	<nav>
 		<div class="dropdown">
-		<ul>여행주간이란?
+		<ul>여행지 소개
 			<div class="dropdownContents">
-				<li><a href="https://www.naver.com">여행주간의 의미</a></li>
+			<li><a id="asdf" href="https://www.naver.com">아시아</a></li>
+			<li><a id="asdf" href="https://www.naver.com">유럽</a></li>
+			<li><a id="asdf" href="https://www.naver.com">아프리카</a></li>
+			<li><a id="asdf" href="https://www.naver.com">아메리카</a></li>
+			<li><a id="asdf" href="https://www.naver.com">오세아니아</a></li>
 			</div>
 		</div>
 		</ul>
 		<div class="dropdown">
-		<ul>여행주간프로그램
+		<ul> 준비
 			<div class="dropdownContents">
-			<li><a href="https://www.naver.com">테마여행</a></li>
-			<li><a href="https://www.naver.com">지역여행</a></li>
+				<li><a id="asdf" href="https://www.naver.com">취항 노선 안내</a></li>
+				<li><a id="asdf" href="https://www.naver.com">스케줄 조회</a></li>
+				<li><a id="asdf" href="https://www.naver.com">출-도착 안내</a></li>
+				<li><a id="asdf" href="https://www.naver.com">공항 카운터 안내</a></li>
+				<li><a id="asdf" href="https://www.naver.com">수하물</a></li>
+				<li><a id="asdf" href="https://www.naver.com">할인 안내</a></li>
 			</div>
 		</div>
 		</ul>
 		<div class="dropdown">
-		<ul>여행정보
+		<ul>비행
 			<div class="dropdownContents">
-			<li><a href="https://www.naver.com">여행정보</a></li>	
+			<li><a id="asdf" href="https://www.naver.com">기내 여행 가이드</a></li>
+			<li><a id="asdf" href="https://www.naver.com">번들 서비스</a></li>
+			<li><a id="asdf" href="https://www.naver.com">좌석지정</a></li>
+			<li><a id="asdf" href="https://www.naver.com">기내식</a></li>
+			<li><a id="asdf" href="https://www.naver.com">기내 면세품</a></li>
+			<li><a id="asdf" href="https://www.naver.com">기내 구조</a></li>
 			</div>
 		</div>
 		</ul>
 		<div class="dropdown">
-		<ul>특별혜택
+		<ul>제휴
 			<div class="dropdownContents">
-			<li><a href="https://www.naver.com">이달의 혜택</a></li>
-			<li><a href="https://www.naver.com">우대자 혜택</a></li>
+			<li><a id="asdf" href="https://www.naver.com">호텔</a></li>
+			<li><a id="asdf" href="https://www.naver.com">렌터카</a></li>
+			<li><a id="asdf" href="https://www.naver.com">여행자 보험</a></li>
+			<li><a id="asdf" href="https://www.naver.com">수해불 보관/배송 서비스</a></li>
+			<li><a id="asdf" href="https://www.naver.com">카드 제휴</a></li>
+			<li><a id="asdf" href="https://www.naver.com">패스 할인</a></li>
 			</div>
 		</div>
 		</ul>
 		<div class="dropdown">
 		<ul>이벤트
 			<div class="dropdownContents">
-			<li><a href="https://www.naver.com">진행중인 이벤트</a></li>
-			<li><a href="https://www.naver.com">당첨자 발표</a></li>
+			<li><a id="asdf" href="https://www.naver.com">진행중인 이벤트</a></li>
+			<li><a id="asdf" href="https://www.naver.com">당첨자 발표</a></li>
 			</div>
 		</div>
 		</ul>
-
 	</nav>
+	<br><br><br><br><br><br><br><br><br><br>
+	<p id="world"><img src="./world.jpg" width="500"></p>
 	<div class="clear"></div>
 	<section>
-		<img src="./img/4.png" width="750" height="180">
+		<a href="www.naver.com"><img src="./rhksrhkdaudth1.jpg" width="319.5" height="500"></a>	
+		<a href="www.naver.com"><img src="./rhksrhkdaudth2.jpg" width="319" height="500"></a>
+		<a href="www.naver.com"><img src="./rhksrhkdaudth3.jpg" width="320" height="500"></a>
 	</section>
-	<aside>
-		<ul>
-			<li><a href="https://www.naver.com">마을여행</a></li>
-			<li><a href="https://www.naver.com">핵심혜택</a></li>
-			<li><a href="https://www.naver.com">이벤트</a></li>
-			<li><a href="https://www.naver.com">대한민국 구석구석</a></li>
-		</ul>
-	</aside>
 	<section class="clear">
-		<img src="./img/3.png" width="970">
+	
 	</section>
 	<div class="clear"></div>
 	<footer>
