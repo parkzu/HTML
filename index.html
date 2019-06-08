@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<style>
+	<title>미션</title>
+<style type="text/css">
 	*{
 	padding : 0;
 	margin 0;
@@ -10,13 +10,13 @@
 #page {
 	width: 1000px;
 	margin: auto;
-	//border: solid 1px red;
+	//border: solid 1px blue;
 }
 .clear {
 	clear: both;
 }
 header {
-	width: 1000px;
+	width: 970px;
 	height: 100px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
@@ -24,20 +24,21 @@ header {
 #logo {
 	margin-top: 20px;
 	float: left;
+	margin-left: 20px;
 }
 #top {
 	float: right;
 	margin: 30px 20px 0 0;
 }
 nav {
-	width: 1000px;
+	width: 750px;
 	height: 70px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
 }
 nav li {
-	float: left;
-	margin: 20px 50px;
+	float: center;
+	margin: 20px;
 }
 li {
 	list-style-type: none;
@@ -52,13 +53,14 @@ aside {
 	margin-left: 30px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
-	padding-left: 25px; 
+	padding-left: 25px;
+	padding-right: 25px; 
 }
 aside li {
 	margin-bottom: 20px;
 }
 footer {
-	width: 1000px;
+	width: 970px;
 	height: 100px;
 	margin-top: 10px;
 	border: solid 1px #cccccc;
@@ -70,12 +72,34 @@ footer {
 #customer {
 	float: right;
 	margin: 30px 0 0 180px;
+	padding-right: 30px;
+}
+.dropdown{
+			display: inline-block;
+		}
+		.dropdownContents{
+			display: none;
+			background-color: white;
+			position: absolute;
+			border: solid 1px #777777;
+		}
+		.dropdown:hover .dropdownContents{
+			display: block;
+		}
+nav ul {
+	margin: 30px;
+}
+a:hover {
+	color: pink;
+}
+a {
+	text-decoration: none;
 }
 </style>
 </head>
-<body><div id="page">
+<body>
+<div id="page">
 <header>
-	
 	<div id="logo">
 		봄 여행 주간 4.27 ~ 5.12
 	</div>
@@ -85,28 +109,60 @@ footer {
 </header>
 	<div class="clear"></div>
 	<nav>
-		<ul>
-			<li>여행주간이란?</li>
-			<li>여행주간프로그램</li>
-			<li>여행정보</li>
-			<li>특별혜택</li>
-			<li>이벤트</li>
+		<div class="dropdown">
+		<ul>여행주간이란?
+			<div class="dropdownContents">
+				<li><a href="https://www.naver.com">여행주간의 의미</a></li>
+			</div>
+		</div>
 		</ul>
+		<div class="dropdown">
+		<ul>여행주간프로그램
+			<div class="dropdownContents">
+			<li><a href="https://www.naver.com">테마여행</a></li>
+			<li><a href="https://www.naver.com">지역여행</a></li>
+			</div>
+		</div>
+		</ul>
+		<div class="dropdown">
+		<ul>여행정보
+			<div class="dropdownContents">
+			<li><a href="https://www.naver.com">여행정보</a></li>	
+			</div>
+		</div>
+		</ul>
+		<div class="dropdown">
+		<ul>특별혜택
+			<div class="dropdownContents">
+			<li><a href="https://www.naver.com">이달의 혜택</a></li>
+			<li><a href="https://www.naver.com">우대자 혜택</a></li>
+			</div>
+		</div>
+		</ul>
+		<div class="dropdown">
+		<ul>이벤트
+			<div class="dropdownContents">
+			<li><a href="https://www.naver.com">진행중인 이벤트</a></li>
+			<li><a href="https://www.naver.com">당첨자 발표</a></li>
+			</div>
+		</div>
+		</ul>
+
 	</nav>
 	<div class="clear"></div>
 	<section>
-		<img src="./img/4.png" width="700">
+		<img src="./img/4.png" width="750" height="180">
 	</section>
 	<aside>
 		<ul>
-			<li>마을여행</li>
-			<li>핵심혜택</li>
-			<li>이벤트</li>
-			<li>대한민국 구석구석</li>
+			<li><a href="https://www.naver.com">마을여행</a></li>
+			<li><a href="https://www.naver.com">핵심혜택</a></li>
+			<li><a href="https://www.naver.com">이벤트</a></li>
+			<li><a href="https://www.naver.com">대한민국 구석구석</a></li>
 		</ul>
 	</aside>
 	<section class="clear">
-		<img src="./img/3.png" width="700">
+		<img src="./img/3.png" width="970">
 	</section>
 	<div class="clear"></div>
 	<footer>
