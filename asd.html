@@ -16,17 +16,18 @@
 		height: 50px;	
 		font-family: 굴림;
 		font-size: 20px;
-		transition-property: all;
-		animation-name: shape;
-		animation-direction: alternate;
-		animation-iteration-count: infinite;
-	@keyframes shape{
-		from{
-			border: 1px solid red;
-			
-		}
+
 	}
+		#ts:hover{
+		color: red;
+		background-color: black;
+		transform: scale(1,2);
+		transition: all 0.3s ease-in-out;
+		width: 100px;
+		height: 100px;
+		transition-duration: 1s;
 	}
+
 	header {
 	width: 100%;
 	height: 230px;
@@ -93,7 +94,7 @@ fieldset{
 </header>
 </div>
 	<section>
-		<img src="./login.jpg" width="1550">
+		<a id="ts"> <img src="./login.jpg" width="1550"></a>
 	</section>
 					<fieldset>
 						<legend>LOGIN</legend>
