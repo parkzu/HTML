@@ -61,14 +61,6 @@ section {
 	width: 970px;
 	height: 500px;
 }
-aside {
-	float: left;
-	margin-left: 30px;
-	margin-top: 10px;
-	border: solid 1px #cccccc;
-	padding-left: 25px;
-	padding-right: 29px
-}
 aside li {
 	margin-bottom: 20px;
 }
@@ -161,6 +153,7 @@ footer {
 	margin-left: 340px;
 }
 #sns{
+	margin-top: 0px;
 	display: inline-block;
 }
 #worldd {
@@ -182,6 +175,21 @@ footer {
 .clear3 {
 	height: 100px;
 }
+body{
+	background-color: #e7f7f7;
+}
+#menu {
+	height: 150px;
+	width: 300px;
+	background-color: blue;
+	transition: height 0.5s;
+}
+#menu:hover {
+	height: 300px;
+	width: 300px;
+	background-color: blue;
+		transition-delay: 0.5s;
+}
 </style>
 </head>
 <body>
@@ -191,7 +199,7 @@ footer {
 <header>
 	<div id="qwqw">
 	<div id="logo">
-		<img src="./logo.jpg" width="600" height="170">
+		<a href="./index.html"><img src="./logo.jpg" width="600" height="170"></a>
 	</div>
 
 	<div id="top">
@@ -265,10 +273,13 @@ footer {
 		</div>
 		</ul>
 	</nav>
+
 	<section id="one">
-	<img src="./v1.jpg" width="1200" height="300">
+	<img src="./v1.jpg" width="1200" height="400">
+	<div style="font-family: noto sans cjk kr; font-size: 50px; color: #black; margin-left: 350px; ">SNS에서 곤트래블 만나기</div>
+	<aside><div id="menu" style="border: dashed 1px; background-image: url(./qwe4.jpg);  color: white; top: 350px; text-align: center; position: fixed; margin-left: 1200px; font-size: 40px; width:300px; height: 380px; "><a title="home">빠른 메뉴<br>--------<br></a><a title="go" style="text-decoration: none; color: white; font-size: 30px;" href="./asia.html">아시아 예매</a><br><a title="go" style="text-decoration: none; color: white; font-size: 30px;" href="./eu.html">유럽 예매</a><br>
+		<a title="go" style="text-decoration: none; color: white; font-size: 30px;" href="./am.html">아메리카 예매</a><br><a title="go" style="text-decoration: none; color: white; font-size: 30px;" href="./os.html">오세아니아 예매</a></div></aside>
 	</section>
-	<div class="clear"></div>
 	<section id="sns">
 	<a href="https://www.instagram.com/?hl=ko"> <img src="insta.jpg" width="480" height="110"></a>
 	<a href="https://www.facebook.com"><img src="facebook.jpg" width="485" height="110"></a></section>
@@ -310,7 +321,6 @@ footer {
 			관광안내전화 : 국번없이 1330
 		</div>
 	</footer>
-	
 
 </body>
 </html>
