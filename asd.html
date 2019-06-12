@@ -19,7 +19,7 @@
 
 	}
 	#ts {
-		margin-left: 180px;
+		margin-left: 900px;
 	}
 		#ts:hover{
 		color: red;
@@ -78,6 +78,20 @@
 fieldset{
 	height: 118px;
 }
+#air{
+	width: 582px;
+	height: 582px;
+	background-image: url(./air2.jpg);
+	transition: width 0.1s;
+}
+#air:hover {
+	width: 100%;
+	height: 582px; 
+	background-image: url(./air2.jpg);
+	transition-delay: 0.1s;
+}
+section {
+	width: 100%;
 }
 </style>
 </head>
@@ -96,14 +110,15 @@ fieldset{
 </div>
 </header>
 </div>
-	<section>
-		<a id="ts"> <img src="./login.jpg" width="1550"></a>
+	<section style="background-color: white;">
+		<a id="ts"><a style="font-family: noto sans cjk kr; text-align: center; font-size: 40px;">로그인</a></a>
 	</section>
 					<fieldset>
-						<legend>LOGIN</legend>
+						<legend style="font-family: noto sans cjk kr;">LOGIN</legend>
 						<span><input type="text" name="id" id="id" maxlength="20" placeholder="아이디" style="text-transform:uppercase;"></span>
 						<span><label for="pw"></label><input type="password" name="pw" id="pw" maxlength="20" placeholder="비밀번호"></span>
-						<a id="asd" href="index.html">로그인</a>
+						<a id="asd" href="./index.html"><button type="button"> 로그인</button></a><a id="asd" href="./signin.html"><button type="button"></a>회원가입</button>
 					</fieldset>
+					<section style="background-image: url(./aaa2.jpg)"><div id="air"><img src="./air.jpg"></div></section>
 </body>
 </html>
