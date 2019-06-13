@@ -1,0 +1,237 @@
+<!--
+TECHNOTE-TOP(plus)
+File: Lib-20.cgi
+Update:2002.11
+Copyright(c) 1999,11 technote inc. All right reserved.
+http://www.technote.co.kr
+-->
+<HTML>
+<HEAD>
+<TITLE>ID 인증</TITLE>
+
+
+          <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+
+        
+<STYLE TYPE="text/css">
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:hover {color: red; text-decoration: underline}
+BODY,TR,TD,input,textarea{font-size:9pt;font-family:굴림,Tahoma;}
+textarea{overflow:auto;}
+</style>
+</HEAD>
+<BODY bgcolor=#ffffff text="black" link="#555577" vlink="#555577"
+   topmargin='10' leftmargin='10' alink="red">
+<DIV align=center>
+<!-- config.cgi : [41]번 항목에서 삽입 -->
+
+           <!-- 페이지 시작부분에 위치할 내용을 넣으세요. config.cgi 항목[41]---->
+
+       
+<!-- 종합관리에서 삽입 -->
+<!-- 관리설정 [9-23] 에서삽입 --><img src=./image/userimage/reg-w.gif border=0 align=absmiddle> 회원확인및 등록<br>
+
+
+<!-- #### 회원 등록폼 시작 #### -->
+
+<script language='JavaScript'>
+    function NewWinidchk() {
+      if(document.MemberReg.input_id.value.length < 3){
+         alert("아이디를 입력하십시오.");
+         return false;
+      }
+      document.MemberReg.target='idchk';
+      idcheckwindow = window.open('', 'idchk', 'width=300,height=120');
+      idcheckwindow.focus();
+     return;
+   }
+
+   // 입력완료-저장버튼 클릭시 입력value 검사코드 추가----
+   function passchk(){
+       var Regform = document.MemberReg;
+       Regform.target = '';
+       if(Regform.password.value != Regform.passwordchk.value){
+           alert("입력하신 두 비밀번호가 일치하지 않습니다. \n \n다시 입력하십시오.");
+           Regform.password.value = '';
+           Regform.passwordchk.value = '';
+            Regform.password.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<STYLE TYPE='text/css'>
+.formleftcell{background-color:#EFEFEF; border:1 solid #9098A0;}
+.inputtxt{font-size:9pt; border:1 solid #5F5F6F;}
+</STYLE>
+
+<TABLE cellpadding=3 cellspacing=0 width='550' border=0
+    style="
+    border:1 solid #384356;
+    scrollbar-face-color: #eeeeee;
+    scrollbar-shadow-color: #666666;
+    scrollbar-highlight-color: #cccccc;
+    scrollbar-3dlight-color: #fafafa;
+    scrollbar-darkshadow-color: #fafafa;
+    scrollbar-track-color: #eeeeee;
+    scrollbar-arrow-color: #777777;
+    ">
+
+   <tr>
+     <td bgcolor=#D1D4D7 align=center>
+       <img src=./image/baseicon/xpeople.gif border=0 align=absmiddle>
+          <font style='font-size:10pt;'><b> 회원등록 신청서 작성 </b></font>
+     </td>
+   </tr>
+
+
+<TR>
+<TD  bgcolor=#ffffff align=center>
+<TABLE border=0 cellpadding=0 cellspacing=3 width='525'>
+<FORM method='post' name='MemberReg' action='./main.cgi' enctype='multipart/form-data'>
+<input type=hidden name=xx value=1>
+<input type=hidden name='board' value='BOM_LOGIN_BD'>
+<input type=hidden name='command' value='keep_form'>
+<input type=hidden name='ch_id_pass' value='2'>
+<TR>
+  <TD colspan=2><br>&nbsp;
+    <img src=./image/baseicon/pen2.gif border=0><b>회원등록 양식 작성</b> &nbsp; &nbsp;  <font color=#888888>체크되어 있는 항목은 반드시 입력하셔야 등록됩니다.</font>
+  </TD>
+</TR>
+
+<TR>
+<TD class=formleftcell width=150><nobr><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>  아이디 등록</nobr></TD>
+<TD bordercolorlight=#ffffff><input type=text name='input_id' maxlength='18' size='20' class=inputtxt>
+<input type=submit name='overlap' value='ID중복검사' class=inputtxt onClick='return NewWinidchk()'> 영문,숫자</TD>
+</TR>
+
+<TR>
+<TD class=formleftcell width=150><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle> 
+ 비밀번호 등록</TD>
+<TD bordercolorlight=#ffffff>
+<input type=password name="password" maxlength="15" size="20" class=inputtxt> 영문,숫자</TD>
+</TR>
+
+<TR>
+<TD class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle> 
+ 비밀번호 재입력</TD>
+<TD bordercolorlight=#ffffff>
+<input type=password name="passwordchk" maxlength="15" size="20" class=inputtxt></TD>
+</TR>
+
+
+<TR><TD class=formleftcell width=150><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle> 
+ 이 름</TD>
+<TD bordercolorlight=#ffffff>
+<input type=text name="input_name" maxlength="20" size="20" value="" class=inputtxt></TD>
+</TR>
+
+<TR>
+<TD class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle> 
+ 메 일 </TD>
+<TD bordercolorlight=#ffffff>
+<input type=text name="input_mail" size="40" value="" class=inputtxt></TD>
+</TR>
+
+<TR>
+<TD  class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle> 
+ 홈페이지 </TD>
+<TD bordercolorlight=#ffffff>
+<input type=text name="input_home"  size="40" value="http://" class=inputtxt></TD>
+</TR>
+
+<TR>
+<TD  class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   이미지,아이콘 </TD>
+
+<TD bordercolorlight=#ffffff><input type=file name='binfile' size=21 class=inputtxt> gif,jpg</TD></TR>
+<TR>
+<TD  class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   학번 </TD>
+<TD bordercolorlight=#ffffff><input type=text name="WPL_87" size="40" value="" maxlength="14" class=inputtxt></td>
+</TR>
+
+<TR>
+<TD  class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   전화번호(핸드폰) </TD>
+<TD bordercolorlight=#ffffff><input type=text name="WPL_88" size="40" value="" maxlength="20" class=inputtxt></td>
+</TR>
+
+<TR>
+<TD  class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   전화번호2 </TD>
+<TD bordercolorlight=#ffffff><input type=text name="WPL_89" size="40" value="" maxlength="20" class=inputtxt></td>
+</TR>
+
+<TR>
+<TD  class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   성별 </TD>
+<TD bordercolorlight=#ffffff><input type=radio name="WPL_90"  value="남자">남자 <input type=radio name="WPL_90"  value="여자">여자 </td>
+</TR>
+
+<TR>
+<TD class=formleftcell><img src=./image/baseicon/wcheck.gif border=0 width=11 height=11 align=right> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   생년월일 </TD>
+<TD bordercolorlight=#ffffff><input type=text name="WPL_193" size="20" value="" maxlength="15" class=inputtxt> (예: 1978／06／15)</TD>
+</TR>
+
+<TR>
+<TD class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>   관심분야 </TD>
+<TD bordercolorlight=#ffffff><select name="WPL_194" class=inputtxt><option  value=""></option><option   value="컴퓨터">컴퓨터</option><option   value="문화,예술">문화,예술</option><option   value="건강,의학">건강,의학</option><option   value="쇼핑">쇼핑</option><option   value="게임,오락">게임,오락</option><option   value="뉴스">뉴스</option><option   value="영화,음악">영화,음악</option><option   value="채팅,미팅">채팅,미팅</option><option   value="과학,기술">과학,기술</option></select></TD>
+</TR>
+
+<TR>
+<TD class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>  참고사항</TD>
+<TD bordercolorlight=#ffffff><textarea name='WPL_266' rows='3' cols='38'  class=inputtxt></textarea></td>
+</TR>
+
+<TR>
+<TD class=formleftcell> &nbsp; <img src=./image/baseicon/point3.gif align=absmiddle>  비밀번호 힌트</TD>
+<TD bordercolorlight=#ffffff><input type=text name="WPL_267" size="40" value="" maxlength="40" class=inputtxt></td>
+</TR>
+
+<TR><TD colspan=2 align=center><br>
+<INPUT type=image onClick='return passchk()' src='./image/baseicon/buttnsave.gif' border=0>&nbsp; &nbsp; &nbsp;
+<a href=javascript:void(0)><img  src='./image/baseicon/buttncancel.gif' border=0 onclick=wrcancel.click()></a>
+<INPUT type=reset value=' '  style='width:0; border-width:0; height:1; background-color:#fafafa' name='wrcancel'>
+
+</TD>
+</TR>
+
+</TABLE>
+
+</td></tr>
+</table>
+<table border=0 cellpadding=1 cellspacing=0 width=550><tr><td height=2 bgcolor=#dddddd></td></tr></table>
+</form>
+
+<!-- ######## 회원 등록폼 끝### -->
+
+<!--  회원정보조회/수정  ,  비번분실  -->
+<TABLE border=0 cellpadding=2 cellspacing=0 width='550' style='border:1 solid #808890'>
+<TR>
+<TD align=center bgcolor=#fafafa>
+    <a href='javascript:void(0)'
+    onClick="window.open('./print.cgi?board=BOM_LOGIN_BD&MemberPrint=1', '', 'scrollbars=yes,resizable=yes,width=500,height=250')">
+    <font color=#888888>회원등록정보 조회/수정</font>
+    </a>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <a href='javascript:void(0)'
+    onClick="window.open('./print.cgi?board=BOM_LOGIN_BD&MemberDfind=1', '', 'scrollbars=yes,resizable=yes,width=500,height=300')">
+    <font color=#888888>비밀번호 분실</font>
+    </a>
+</TD>
+</TR>
+</TABLE>
+
+
+<br>
+<a href=javascript:history.back()><img src=./image/baseicon/back2.gif border=0></a><br>
+<!-- 관리설정 [9-23-1] 에서삽입 -->
+<!-- 종합관리에서 삽입 -->
+<!-- config.cgi : [41]번 항목에서 삽입 -->
+
+           <!-- 페이지 끝 부분에 위치할 내용을 넣으세요 config.cgi 항목[41] -->
+
+        </DIV></body></HTML>
+
+
+
+<!--        테크노트 로그인 쿠키이름:    'homebombee'                          -->
+
